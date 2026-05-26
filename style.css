@@ -1,0 +1,185 @@
+/* AgroDash Offline - Custom Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;650&display=swap');
+
+:root {
+  --primary: #047857;
+  --primary-hover: #065f46;
+  --primary-light: #e6f4ea;
+  --bg-app: #faf8f4;
+  --bg-sidebar: #064e3b;
+  --bg-sidebar-hover: #022c22;
+  --text-dark: #1c1950;
+  --text-body: #44403c;
+  --text-muted: #78716c;
+  --border-light: #e7e5e4;
+  --accent-amber: #b45309;
+  --bg-amber: #fef3c7;
+  --accent-red: #be123c;
+  --bg-red: #ffe4e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Layout Grid */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Base Styles */
+h1, h2, h3, h4, h5 {
+  color: #1c1917;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Chart Canvas Wrapper */
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+/* Table styles */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.8125rem;
+}
+
+.custom-table th {
+  background-color: #fcfcf9;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1.5px solid var(--border-light);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f5f5f4;
+  vertical-align: middle;
+}
+
+.custom-table tr:hover td {
+  background-color: #fafaf9;
+}
+
+/* Custom classes */
+.font-display {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.empty-cell-highlight {
+  background-color: #fffbeb !important;
+  border: 1px dashed #f59e0b !important;
+  color: #d97706 !important;
+}
+
+/* Transitions */
+.transition-all-300 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility layout blocks for non-tailwind fallback styling */
+.card-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-indicator-ok {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.card-indicator-warning {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.card-indicator-danger {
+  background-color: #ffe4e6;
+  color: #be123c;
+}
+
+/* Animation Loader */
+.hexagon-spinner {
+  width: 48px;
+  height: 48px;
+  animation: hexRotate 1.5s ease-in-out infinite;
+}
+
+@keyframes hexRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
