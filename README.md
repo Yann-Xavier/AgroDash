@@ -1,6 +1,6 @@
-# AgroDash Offline - Sistema de Gestão Agrícola Integrada
+# AgroDash - Sistema de Gestão Agrícola Integrada
 
-O **AgroDash Offline** é uma solução ARP (Agro Resource Planning) de alto padrão, autossuficiente e offline, operando diretamente no navegador web sem dependência de internet ou servidores externos.
+O **AgroDash** é uma solução ARP (Agro Resource Planning) de alto padrão, autossuficiente e offline, operando diretamente no navegador web sem dependência de internet ou servidores externos.
 
 Desenvolvido em HTML puro, CSS personalizado e JavaScript nativo estruturado, o sistema conserta a lacuna de rede em propriedades rurais distantes, permitindo que produtores carreguem seus bancos de dados Excel locais para gerar dashboards de fluxo de caixa, controle volumétrico de estoque e auditorias estruturais instantaneamente.
 
